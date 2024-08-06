@@ -9,7 +9,7 @@ use yii\bootstrap5\Breadcrumbs;
 use yii\bootstrap5\Html;
 use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
-
+use yii\helpers\Url;
 
 
 AppAsset::register($this);
@@ -35,8 +35,8 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <header id="header">
     <?php
     NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
+        'brandLabel' => 'Викладач', //Yii::$app->name,
+        'brandUrl' => Url::toRoute(['default/index']), //Yii::$app->homeUrl,
         'options' => ['class' => 'navbar-expand-md navbar-dark bg-success fixed-top']
     ]);
     echo Nav::widget([

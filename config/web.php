@@ -11,11 +11,31 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
+
+    'modules' => [
+        'lecturer' => [
+            'class' => 'app\modules\lecturer\Module',
+        ],
+
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+        ],
+
+        'edudep' => [
+            'class' => 'app\modules\edudep\Module',
+        ],
+    ],
+
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'NGDyMt-IvHG44YspXBIWkBRox12y17Mg',
         ],
+
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+        ],
+
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
